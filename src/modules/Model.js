@@ -213,19 +213,13 @@ class Model {
 
     this.fetchCounter++;
 
-  const optionsInFetch = {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      // Authorization: 'fsq3p4FP65cE0UfDf+NDLb+XenjPZ9v8emRBfdCyqdYy2eY=',
-      Authorization: 'fsq3TeMJgpL5/+RHkaF1heZMd597KYyIU1B6AePJmB1Pzpo=',
-    }
-  };
+  const optionsInFetch = config.optionsInFetch;
   
   const searchParams = new URLSearchParams({
     ll: `${lat},${lon}`, 
-    open_now: 'true',
+    // open_now: 'true',
     radius: radius,
+    ...config.searchParams,
   });
   
   const urlFetch = `https://api.foursquare.com/v3/places/search?${searchParams}`;
