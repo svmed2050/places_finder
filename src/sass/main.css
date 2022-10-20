@@ -1,0 +1,86 @@
+/* $base-color: red; */
+
+body {
+  background-color: rgb(207, 207, 229);
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+
+.main-block {
+  display: flex;
+  justify-content: center; 
+}
+
+.main-block button {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.main-box {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.input-size {
+  margin: 5px;
+  font-size: 18px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 5px;
+}
+
+#no-response {
+  display: flex;
+  justify-content: center; 
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+table {
+  width: 450px;
+  margin: 30px auto;
+  font-size: 20px;
+  border: 1px solid #ffffff;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ffffff;
+  text-align: left;
+  padding: 8px;
+}
+
+/* 
+Spinner
+*/
+
+.loading {
+  display: flex;
+  justify-content: center; 
+}
+
+.spinner{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  border-left: 3px solid #5c3075;
+  border-right: 3px solid #5c3075;
+  border-bottom: 3px solid #5c3075;
+  border-radius: 50px;
+  animation: spin 1s linear infinite
+}
+@keyframes spin{
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.spinner-dotted{
+  border-style: dotted;
+  border-width: 5px;
+}
